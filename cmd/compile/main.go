@@ -185,15 +185,15 @@ func run() error {
 		return err
 	}
 	// remove unused symlinks
-	if err := os.Remove(filepath.Join(dstFolder, "lib", "modules", release, "build")); err != nil {
+	if err := os.Remove(filepath.Join(dstFolder, "lib", "modules", release, "build")); err != nil && !os.IsNotExist(err) {
 		return err
 	}
-	if err := os.Remove(filepath.Join(dstFolder, "lib", "modules", release, "source")); err != nil {
+	if err := os.Remove(filepath.Join(dstFolder, "lib", "modules", release, "source")); err != nil && !os.IsNotExist(err) {
 		return err
 	}
 
 	// copy dtb files
-	files, err := filepath.Glob(filepath.Join(bootFolder, "dts", "bcm*-rpi-*.dtb"))
+	files, err := filepath.Glob(filepath.Join(bootFolder, "dts", "**/bcm*-rpi-*.dtb"))
 	if err != nil {
 		return err
 	}
