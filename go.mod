@@ -1,4 +1,4 @@
-module github.com/gokrazy-community/kernel-rpi-os-32
+module github.com/stackcoder/kernel-rpi-os-32
 
 go 1.18
 
