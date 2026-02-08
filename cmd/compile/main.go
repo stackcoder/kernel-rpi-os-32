@@ -82,7 +82,7 @@ func run() error {
 		"--enable", "MODULES",
 
 		// Disable module compression (wifi needs this)
-		"--enable", "MODULE_COMPRESS_NONE",
+		"--disable", "MODULE_COMPRESS",
 		"--disable", "MODULE_COMPRESS_GZIP",
 		"--disable", "MODULE_COMPRESS_XZ",
 		"--disable", "MODULE_COMPRESS_ZSTD",
@@ -146,6 +146,13 @@ func run() error {
 		"--module", "USB_SERIAL_CH341",
 		"--module", "USB_SERIAL_PL2303",
 		"--module", "USB_SERIAL_SAFE",
+
+		// SPI
+		"--enable", "SPI",
+		"--module", "SPI_DEV",
+		"--module", "SPI_GPIO",
+		"--module", "SPI_BCM2835",
+		"--module", "SPI_BCM2708",
 	}
 
 	if err := dockerRun(args...); err != nil {
