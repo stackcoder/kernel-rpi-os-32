@@ -58,5 +58,5 @@ jobs:
         with:
           commit_message: kernel ${{steps.fetch.outputs.version}}
           # bump the version below and add a force-update file to release a new version
-          tagging_message: v1.0.8-${{steps.fetch.outputs.version}}
+          tagging_message: v1.1.3-${{steps.fetch.outputs.version}}
           
