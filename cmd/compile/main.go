@@ -153,6 +153,9 @@ func run() error {
 		"--module", "SPI_GPIO",
 		"--module", "SPI_BCM2835",
 		"--module", "SPI_BCM2708",
+
+		// GPIOMEM
+		"--module", "RASPBERRYPI_GPIOMEM",
 	}
 
 	if err := dockerRun(args...); err != nil {
