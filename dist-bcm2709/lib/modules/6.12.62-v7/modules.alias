@@ -43,6 +43,11 @@ alias crypto-jitterentropy_rng jitterentropy_rng
 alias jitterentropy_rng jitterentropy_rng
 alias crypto-ecdh ecdh_generic
 alias ecdh ecdh_generic
+alias platform:rpi-gpiomem raspberrypi_gpiomem
+alias of:N*T*Craspberrypi,gpiomemC* raspberrypi_gpiomem
+alias of:N*T*Craspberrypi,gpiomem raspberrypi_gpiomem
+alias of:N*T*Cbrcm,bcm2835-gpiomemC* raspberrypi_gpiomem
+alias of:N*T*Cbrcm,bcm2835-gpiomem raspberrypi_gpiomem
 alias spi:spidev spidev
 alias spi:spidev spidev
 alias spi:si3210 spidev

@@ -6,6 +6,7 @@ kernel/crypto/jitterentropy_rng.ko
 kernel/crypto/ecc.ko
 kernel/crypto/ecdh_generic.ko
 kernel/lib/crypto/libaes.ko
+kernel/drivers/char/raspberrypi-gpiomem.ko
 kernel/drivers/spi/spidev.ko
 kernel/drivers/spi/spi-bcm2835.ko
 kernel/drivers/spi/spi-bitbang.ko
