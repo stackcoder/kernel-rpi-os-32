@@ -14,10 +14,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
 
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v7.0.0
         with:
           go-version: 'stable'
 
@@ -54,7 +54,7 @@ jobs:
 
       - name: Commit the new kernel
         if: steps.check.outputs.sha != '' && github.ref_name == github.event.repository.default_branch
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7.2.1
         with:
           commit_message: kernel ${{steps.fetch.outputs.version}}
           # bump the version below and add a force-update file to release a new version
